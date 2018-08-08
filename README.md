@@ -7,7 +7,7 @@
 3. Run the test specs to test your code. To run the specs for a directory, you need to go into that directory and run the command `testem`.
 
 ```
-$ cd foundations-checkpoint-1
+$ cd foundations-checkpoint-1-V2
 $ testem
 TEST'EM 'SCRIPTS!
 Open the URL below in a browser to connect.
