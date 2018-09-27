@@ -1,3 +1,6 @@
+/* eslint-env jasmine */
+/* eslint-disable no-undef */
+
 describe('Pokemon class', () => {
   let pikachu;
 
@@ -6,36 +9,36 @@ describe('Pokemon class', () => {
   });
 
   it('should have a name property', () => {
-    expect(pikachu.name).toEqual('Pikachu');
+    expect(pikachu.name).toBe('Pikachu');
   });
 
   it('should have a health and attackBonus property', () => {
-    expect(pikachu.health).toEqual(250);
-    expect(pikachu.attackBonus).toEqual(4);
+    expect(pikachu.health).toBe(250);
+    expect(pikachu.attackBonus).toBe(4);
   });
 
   describe("methods and properties are on the Pokemon Constructor Functions `.prototype` object'", () => {
     it('should have a biteAttack and isDefeated function on its .prototpye', () => {
-      expect(typeof pikachu.biteAttack === 'function').toEqual(true);
-      expect(pikachu.hasOwnProperty('biteAttack')).toEqual(false);
-      expect(Pokemon.prototype.hasOwnProperty('biteAttack')).toEqual(true);
+      expect(typeof pikachu.biteAttack === 'function').toBe(true);
+      expect(pikachu.hasOwnProperty('biteAttack')).toBe(false);
+      expect(Pokemon.prototype.hasOwnProperty('biteAttack')).toBe(true);
 
-      expect(typeof pikachu.isDefeated).toEqual('function');
-      expect(pikachu.hasOwnProperty('isDefeated')).toEqual(false);
-      expect(Pokemon.prototype.hasOwnProperty('isDefeated')).toEqual(true);
+      expect(typeof pikachu.isDefeated).toBe('function');
+      expect(pikachu.hasOwnProperty('isDefeated')).toBe(false);
+      expect(Pokemon.prototype.hasOwnProperty('isDefeated')).toBe(true);
     });
 
     it('the `biteAttack` method should return the sum of the `attackBonus` property + 2', () => {
-      expect(pikachu.biteAttack()).toEqual(6);
+      expect(pikachu.biteAttack()).toBe(6);
     });
 
     it('the `isDefeated` method returns `false` if the health property is >= 1', () => {
-      expect(pikachu.isDefeated()).toEqual(false);
+      expect(pikachu.isDefeated()).toBe(false);
     });
 
     it('the `isDefeated` method returns `true` if the health property is <= 0', () => {
       pikachu.health = pikachu.health - 250;
-      expect(pikachu.isDefeated()).toEqual(true);
+      expect(pikachu.isDefeated()).toBe(true);
     });
   });
 });
@@ -52,21 +55,24 @@ describe('simulateBattle function', () => {
   });
 
   it('returns a string', () => {
-    expect(typeof simulateBattle(pikachu, charizard, 'Pikachu')).toEqual(
+    expect(typeof simulateBattle(pikachu, charizard, 'Pikachu')).toBe(
       'string'
     );
   });
 
   it('returns the winner (the pokemon that has health remaining)', () => {
-    expect(simulateBattle(pikachu, charizard, 'Pikachu')).toEqual(
+    expect(simulateBattle(pikachu, charizard, 'Pikachu')).toBe(
       'Charizard Wins!'
     );
+    expect(simulateBattle(charizard, pikachu, 'Pikachu')).toBe('Charizard Wins!');
+    expect(simulateBattle(pikachu, charizard, 'Charizard')).toBe('Charizard Wins!');
   });
 
   it('works on multiple instances', () => {
     let krabby = new Pokemon('Krabby', 400, 5);
     let squirtle = new Pokemon('Squirtle', 600, 2);
 
-    expect(simulateBattle(krabby, squirtle, 'Krabby')).toEqual('Krabby Wins!');
+    expect(simulateBattle(krabby, squirtle, 'Krabby')).toBe('Krabby Wins!');
+    expect(simulateBattle(squirtle, krabby, 'Krabby')).toBe('Krabby Wins!');
   });
 });

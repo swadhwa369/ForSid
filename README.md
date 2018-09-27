@@ -16,11 +16,12 @@ http://localhost:7357/
 
 ### Spec Point Values:
 
-- 00 Rectangle: 3.00 
-- 01 Find Object Properties: 5.00
-- 02 Don't Spill The Beans: 7.00
+- 00 Find Object Properties: 5.00
+- 01 Browser Window: 8.00 
+- 02 Thrice: 7.00
 - 03 Right Triangle: 5.00
-- 04 Simulate Battle: 8.00
+- 04 Simulate Battle: 4.00
+  - Note: the `simulateBattle` function is extra credit. 2 Points will be added to your grade if all specs are passing (partial credit is not rewarded for extra credit problems)
 
 ### Submission
 
