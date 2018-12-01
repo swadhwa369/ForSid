@@ -79,7 +79,7 @@ describe('BrowserWindow', () => {
     ]);
 
     firefoxWindow.closeTab(0);
-    // A lot of browsers have a feature where when you close all of your tabs in a window, your "default" tab opens
+    // Many browsers have a feature when all tabs are closed, your "default" tab opens
     // If you close all the tabs, the default tab will re-open
     expect(firefoxWindow.tabs).toEqual([{ tabURL: 'defaultHomePage.com' }]);
   });
