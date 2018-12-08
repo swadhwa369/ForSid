@@ -22,3 +22,19 @@ function thrice (func){
     return func()
   }
 }
+
+/* Great job!!
+* To condense this code slightly, you could flip your logic so you can eliminate one of the returns.
+* Functions automatically return undefined if none is found.
+*
+*   function thrice(callback) {
+*     return () => {
+*       if (i < 3) {
+*         return func()
+*       }
+*       i++
+*     }
+*
+*
+*
+* */

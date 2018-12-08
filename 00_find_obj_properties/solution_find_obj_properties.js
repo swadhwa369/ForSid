@@ -36,3 +36,5 @@ function findObjPropsHasOwn(obj){
 function findObjKeys(obj){
   return Object.keys(obj).join(', ')
 }
+
+/* Pefect solution, great job! */
