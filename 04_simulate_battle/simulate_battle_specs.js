@@ -1,7 +1,7 @@
 /* eslint-env jasmine */
 /* eslint-disable no-undef */
 
-describe('Pokemon class', () => {
+describe('Pokemon', () => {
   let pikachu;
 
   beforeEach(() => {
@@ -55,17 +55,19 @@ describe('simulateBattle function', () => {
   });
 
   it('returns a string', () => {
-    expect(typeof simulateBattle(pikachu, charizard, 'Pikachu')).toBe(
-      'string'
-    );
+    expect(typeof simulateBattle(pikachu, charizard, 'Pikachu')).toBe('string');
   });
 
   it('returns the winner (the pokemon that has health remaining)', () => {
     expect(simulateBattle(pikachu, charizard, 'Pikachu')).toBe(
       'Charizard Wins!'
     );
-    expect(simulateBattle(charizard, pikachu, 'Pikachu')).toBe('Charizard Wins!');
-    expect(simulateBattle(pikachu, charizard, 'Charizard')).toBe('Charizard Wins!');
+    expect(simulateBattle(charizard, pikachu, 'Pikachu')).toBe(
+      'Charizard Wins!'
+    );
+    expect(simulateBattle(pikachu, charizard, 'Charizard')).toBe(
+      'Charizard Wins!'
+    );
   });
 
   it('works on multiple instances', () => {
