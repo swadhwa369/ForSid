@@ -9,7 +9,7 @@ Create the function `multiplicationTable` that accepts two arguments
 
 The `rows` X `columns` represents the dimension of a multiplication table.
 
-The return value is a multidimensional array.
+The **return value is a multidimensional or one-dimensional array**.
 
 Examples:
 
