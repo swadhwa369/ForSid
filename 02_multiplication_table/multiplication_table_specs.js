@@ -73,4 +73,9 @@ describe('MultiplicationTable', () => {
       [4, 8, 12, 16, 20, 24, 28, 32],
     ]);
   });
+
+  it('in a 0x0 grid (rows X columns), an empty array is returned', () => {
+    const table = multiplicationTable(0, 0);
+    expect(table).toEqual([]);
+  });
 });
