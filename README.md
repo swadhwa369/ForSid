@@ -12,7 +12,7 @@
 
 #### Option 1 - testem is globally installed
 
-- If you have been running `testem` by running the `testem` command in your terminal, you are ready to go. Run `testem` to run the test specs. If you receive any errors or you don't have `testem` globally installed refer to option 2.
+- If you have been running `testem` by running the `testem` command in your terminal, you are ready to go. Run `testem` to run the test specs. If you receive any errors or you don't have `testem` globally installed, refer to option 2.
 
 ```sh
   $ cd ${name-of-the-checkpoint-repository}
