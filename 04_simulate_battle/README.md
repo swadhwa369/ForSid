@@ -1,6 +1,6 @@
 ### Simulate Battle
 
-#### 4.00 Points
+#### 7.00 Points
 
 #### 1) Pokemon Constructor Function
 
@@ -19,9 +19,7 @@ In addition, add the following **two methods on the Pokemon's Constructor Functi
 	- If the Pokemon's health is less than or equal to 0 return `true`, the Pokemon is defeated.
 
 
-#### 2) (EXTRA - CREDIT)  Simulate Battle Function 
-
-NOTE: the `simulateBattle` function is extra credit. 2 points will be added to your grade if all specs are passing (partial credit is not rewarded for extra credit problems)
+#### 2) Simulate Battle Function 
 
 **Create the function `simulateBattle` that simulates a Pokemon Battle!** How does the battle work? 
 
