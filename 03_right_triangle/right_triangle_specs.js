@@ -1,7 +1,7 @@
 /* eslint-env jasmine */
 /* eslint-disable no-undef */
 
-describe('make a right Triangle', () => {
+describe('Make a Right Triangle', () => {
   it('returns an empty string when the rows input is 0', () => {
     expect(rightTriangle(0)).toEqual('');
   });

@@ -9,15 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FullstackAcademy/foundtions-checkpoint-1-V2.git"
+    "url": "git+https://github.com/FullstackAcademy/foundations-checkpoint-pt-1.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FullstackAcademy/foundtions-checkpoint-1-V2/issues"
+    "url": "https://github.com/FullstackAcademy/foundations-checkpoint-pt-1/issues"
   },
-  "homepage": "https://github.com/FullstackAcademy/foundtions-checkpoint-1-V2#readme",
-  "dependencies": {
-    "testem": "^2.9.0"
+  "homepage": "https://github.com/FullstackAcademy/foundations-checkpoint-pt-1#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "testem": "^2.14.0"
   }
 }
