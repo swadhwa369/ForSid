@@ -15,8 +15,8 @@ In addition, add the following **two methods on the Pokemon's Constructor Functi
 
 - `biteAttack`: returns the value of a bite attack.  The value of a `biteAttack` is the `attackBonus` value + 2.
 - `isDefeated`: returns `true` or `false` depending on the Pokemon's `health` property. 
-	- If the `health` value is greater than 0, return `false`
-	- If the Pokemon's health is less than or equal to 0 return `true`, the Pokemon is defeated.
+	- If the `health` value is greater than `0`, return `false`
+	- If the Pokemon's health is less than or equal to `0` return `true`, the Pokemon is defeated.
 
 
 #### 2) Simulate Battle Function (3 pts)
