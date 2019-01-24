@@ -49,9 +49,9 @@ S
 
 In this example, notice there are three rows and five columns.
 
-- For the first row, the column values start at one and increments by one
-- The second row: the column values start at `1 * 2` (the `2` represents the second row)
-- The third row: the column values start at `1 * 3` (the `3` represents the third row)
+- first row: the column values start at one and increment by one
+- second row: the column values start at `1 * 2` (the `2` represents the second row)
+- third row: the column values start at `1 * 3` (the `3` represents the third row)
 
 <hr>
 <br>
