@@ -11,7 +11,10 @@ The `rows` X `columns` represents the dimension of a multiplication table.
 
 The **return value is a multidimensional or one-dimensional array**.
 
-Examples:
+<hr>
+<br>
+
+#### Examples:
 
 ```js
 multiplicationTable(1, 4);
@@ -49,6 +52,9 @@ In this example, notice there are three rows and five columns.
 - For the first row, the column values start at one and increments by one
 - The second row: the column values start at `1 * 2` (the `2` represents the second row)
 - The third row: the column values start at `1 * 3` (the `3` represents the third row)
+
+<hr>
+<br>
 
 ### `return` values
 
