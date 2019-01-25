@@ -8,7 +8,7 @@ The instance created from the `BrowserWindow` function should contain the follow
 - `accountName` - the account name
 - `windowName` - the name of the window such as the category of tabs
 - `tabs` - this is an optional argument and contains an array of objects. If the argument is not passed to the function, the property
-  should be initialized with the array `[{tabURL: 'defaultHomePage.com}]`
+  should be initialized with the array `[{tabURL: 'defaultHomePage.com'}]`
 
 In addition to the properties attached to the instance, the following methods should be accessible via the prototype chain:
 
