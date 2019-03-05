@@ -34,7 +34,7 @@ describe('MultiplicationTable', () => {
     const rows = 3;
     const columns = 2;
     const table = multiplicationTable(rows, columns);
-    const twoColumnsInEachRow = true;
+    let twoColumnsInEachRow = true;
 
     for (let row = 0; row < table.length; row++) {
       if (table[row].length !== columns) {
