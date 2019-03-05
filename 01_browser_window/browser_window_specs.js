@@ -29,7 +29,7 @@ describe('BrowserWindow', () => {
       { tabURL: 'netflix.com' },
     ]);
 
-    const mergedChromeWindow = chromeWindow.joinWindows(chromeWindowTwo);
+    chromeWindow.joinWindows(chromeWindowTwo);
     expect(chromeWindow.tabs.length).toBe(3);
     expect(chromeWindow.tabs).toEqual([
       { tabURL: 'defaultHomePage.com' },
