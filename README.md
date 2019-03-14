@@ -21,6 +21,7 @@
   Open the URL below in a browser to connect.
   http://localhost:7357/
 ```
+
 <hr>
 
 #### Option 2 - Install Testem Locally
@@ -59,10 +60,10 @@ http://localhost:7357/
 The total amount of points for each problem are listed below. Keep in mind, each test spec has a different "weight" or amount of points it is worth. In addition, you can receive partial credit even if your code isn't passing!
 
 - 00 Find Object Properties: 5.00
-- 01 Browser Window: 8.00
-- 02 Create a Multiplication Table: 4.00
-- 03 Right Triangle: 5.00
-- 04 Simulate Battle: 7.00
+- 01 Create a Multiplication Table: 4.00
+- 02 Create Book: 7.00
+- 03 Browser Window: 8.00
+- 04 Right Triangle: 5.00
 
 <hr>
 <br>
