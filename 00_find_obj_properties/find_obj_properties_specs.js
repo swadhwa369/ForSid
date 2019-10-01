@@ -1,7 +1,7 @@
 /* eslint-env jasmine */
 /* eslint-disable no-undef */
 
-describe('Looping to find Object properties using .hasOwnProperty', () => {
+describe('findObjPropsHasOwn', () => {
   function Rectangle(color, height, width) {
     this.color = color;
     this.height = height;
@@ -12,25 +12,25 @@ describe('Looping to find Object properties using .hasOwnProperty', () => {
     return this.height * this.width;
   };
 
-  it("should print out the object's only key", () => {
+  it('prints out the key', () => {
     const greenRectangle = { color: 'green' };
 
     expect(findObjPropsHasOwn(greenRectangle)).toBe('color');
   });
 
-  it("should print out the object's keys, comma delimited", () => {
+  it("prints out the object's keys, comma delimited", () => {
     const yelloRectangle = { color: 'yellow', height: 8, width: 5 };
 
     expect(findObjPropsHasOwn(yelloRectangle)).toBe('color, height, width');
   });
 
-  it('should print keys belonging to the object instance, not on the prototype', () => {
+  it("prints the keys belonging to the instance object, it excludes properties in the object's prototype chain", () => {
     const blueRectangle = new Rectangle('blue', 5, 3);
 
     expect(findObjPropsHasOwn(blueRectangle)).toBe('color, height, width');
   });
 
-  it('should use the `.hasOwnProperty` method', () => {
+  it('it uses the `.hasOwnProperty` method', () => {
     const purpleRectangle = new Rectangle('purple', 7, 2);
     spyOn(purpleRectangle, 'hasOwnProperty').and.callThrough(); // checks to see if hasOwnProperty is called
 
@@ -41,7 +41,7 @@ describe('Looping to find Object properties using .hasOwnProperty', () => {
   });
 });
 
-describe('Looping to find Object properties using `Object.keys` ', () => {
+describe('findObjKeys', () => {
   function Rectangle(color, height, width) {
     this.color = color;
     this.height = height;
@@ -52,31 +52,25 @@ describe('Looping to find Object properties using `Object.keys` ', () => {
     return this.height * this.width;
   };
 
-  it("should print out the object's only key", () => {
+  it('prints out the key', () => {
     const greenRectangle = { color: 'green' };
 
     expect(findObjKeys(greenRectangle)).toBe('color');
   });
 
-  it("should print out the object's keys, comma delimited", () => {
+  it("prints out the object's keys, comma delimited", () => {
     const yelloRectangle = { color: 'yellow', height: 8, width: 5 };
 
     expect(findObjKeys(yelloRectangle)).toBe('color, height, width');
   });
 
-  it('should print keys belonging to the object instance, not on the prototype', () => {
-    /*
-    What is Rectangle? Rectangle is the Constructor Function created in 00_rectangle.
-    You DON'T need to copy and past the Rectangle function into the solutions_findObjProperties.js file if you
-    run testem from foundations-checkpoint-part-1 aka the parent directory.  If you run testem from 01_findObjProperties and receive
-    an error that "Rectangle" is not defined, copy and paste the code from 00 into solution_findObjProperties.js
-    */
+  it("prints the keys belonging to the instance object, it excludes properties in the object's prototype chain", () => {
     const blueRectangle = new Rectangle('blue', 5, 3);
 
     expect(findObjKeys(blueRectangle)).toBe('color, height, width');
   });
 
-  it('should use `Object.keys` method', () => {
+  it('it uses `Object.keys`', () => {
     const purpleRectangle = new Rectangle('purple', 7, 2);
     spyOn(Object, 'keys').and.callThrough(); // checks if Object.keys is called
 
