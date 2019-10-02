@@ -39,7 +39,7 @@ Note: the command **needs to be executed inside of the foundations-checkpoint-pt
 2. After the installation is complete, when you want to run `testem` run the command:
 
 ```sh
-npm run test
+npm test
 ```
 
 3. Here are all of the steps:
@@ -47,7 +47,7 @@ npm run test
 ```sh
 $ cd ${name-of-the-checkpoint-repository}
 $ npm install
-$ npm run test
+$ npm test
 TEST'EM 'SCRIPTS!
 Open the URL below in a browser to connect.
 http://localhost:7357/
@@ -59,11 +59,10 @@ http://localhost:7357/
 
 The total amount of points for each problem are listed below. Keep in mind, each test spec has a different "weight" or amount of points it is worth. In addition, you can receive partial credit even if your code isn't passing!
 
-- 00 Find Object Properties: 5.00
-- 01 Create a Multiplication Table: 4.00
-- 02 Create Book: 7.00
-- 03 Browser Window: 8.00
-- 04 Right Triangle: 5.00
+- 00 Find Object Properties: 6.00
+- 01 Create a Multiplication Table: 5.00
+- 02 Create Book: 8.00
+- 03 Browser Window: 9.00
 
 <hr>
 <br>
