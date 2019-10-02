@@ -1,49 +1,20 @@
 /* eslint-env jasmine */
 /* eslint-disable no-undef */
-describe('MultiplicationTable', () => {
+describe('multiplicationTable', () => {
   it('returns an array', () => {
     const table = multiplicationTable(5, 10);
 
     expect(Array.isArray(table)).toBe(true);
   });
 
-  it('the first argument represents the total amount of rows in the table', () => {
-    const smallTable = multiplicationTable(3, 1);
-    const mediumTable = multiplicationTable(50, 1);
-    const largeTable = multiplicationTable(100, 1);
+  it('every row is an array and the first argument represents the total amount of rows in the table', () => {
+    const smallTable = multiplicationTable(3, 0);
+    const mediumTable = multiplicationTable(6, 0);
+    const largeTable = multiplicationTable(9, 0);
 
-    expect(smallTable.length).toBe(3);
-    expect(mediumTable.length).toBe(50);
-    expect(largeTable.length).toBe(100);
-  });
-
-  it('every row is an array', () => {
-    const table = multiplicationTable(50, 1);
-
-    let everyRowIsAnArray = true;
-    for (let row = 0; row < table.length; row++) {
-      if (Array.isArray(table[row]) === false) {
-        everyRowIsAnArray = false;
-        break; // note: the break keyword stops the execution of the loop
-      }
-    }
-    expect(everyRowIsAnArray).toBe(true);
-  });
-
-  it('the second argument is the amount of "columns" in every row', () => {
-    const rows = 3;
-    const columns = 2;
-    const table = multiplicationTable(rows, columns);
-    let twoColumnsInEachRow = true;
-
-    for (let row = 0; row < table.length; row++) {
-      if (table[row].length !== columns) {
-        twoColumnsInEachRow = false;
-        break;
-      }
-    }
-
-    expect(twoColumnsInEachRow).toBe(true);
+    expect(smallTable).toEqual([[], [], []]);
+    expect(mediumTable).toEqual([[], [], [], [], [], []]);
+    expect(largeTable).toEqual([[], [], [], [], [], [], [], [], []]);
   });
 
   it('in a 1x3 grid (rows X columns ), the column values start at 1 and increment by 1', () => {
