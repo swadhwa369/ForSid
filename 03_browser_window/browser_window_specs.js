@@ -11,13 +11,13 @@ describe('BrowserWindow', () => {
     ]);
   });
 
-  it('the Window function dynamically sets properties on the window instance ', () => {
+  it('the BrowserWindow function dynamically sets properties on the window instance ', () => {
     expect(firefoxWindow.accountName).toBe('Abigale Miller');
     expect(firefoxWindow.windowName).toBe('Social Media');
     expect(firefoxWindow.tabs).toEqual([{ tabURL: 'twitter.com' }]);
   });
 
-  it('the Window function sets adds a default tab if the tabs argument is omitted', () => {
+  it('the BrowserWindow function sets adds a default tab if the tabs argument is omitted', () => {
     expect(chromeWindow.accountName).toBe('Robert Brown');
     expect(chromeWindow.windowName).toBe('Email');
     expect(chromeWindow.tabs).toEqual([{ tabURL: 'defaultHomePage.com' }]);
@@ -82,5 +82,13 @@ describe('BrowserWindow', () => {
     // Many browsers have a feature when all tabs are closed, your "default" tab opens
     // If you close all the tabs, the default tab will re-open
     expect(firefoxWindow.tabs).toEqual([{ tabURL: 'defaultHomePage.com' }]);
+  });
+
+  it("the `joinWindows, newTab, and closeTab` methods are accessible via the instance's prototype chain", () => {
+    const instanceProperties = ['accountName', 'windowName', 'tabs'];
+    expect(Object.keys(chromeWindow).sort()).toEqual(instanceProperties.sort());
+    expect(typeof BrowserWindow.prototype.joinWindows).toBe('function');
+    expect(typeof BrowserWindow.prototype.newTab).toBe('function');
+    expect(typeof BrowserWindow.prototype.closeTab).toBe('function');
   });
 });
