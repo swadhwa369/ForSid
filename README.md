@@ -10,7 +10,7 @@
 
 4. Run the test specs to test your code. Prior to starting the checkpoint, it was instructed that you are are responsible for your development environment. Follow the instructions below to run the test specs:
 
-#### Option 2 - Install Testem
+#### NPM Install and NPM Test
 
 1. Run the command:
 
